@@ -1,0 +1,49 @@
+.buttonnav{
+  width: 33%;
+  height: 100%;
+  font-size: 200%;
+  border: 0px;
+  background-color: rgba(255,255,255,0);
+}
+.buttonnav-secondary{
+  width: 50%;
+  height: 100%;
+  font-size: 200%;
+  border: 0px;
+  background-color: rgba(255,255,255,0);
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+a:active {
+  text-decoration: underline;
+  color: black;
+}
+
+html, body {
+     margin:0; /* remove default margin */
+     padding:0; /* remove default padding */
+     width:100%; /* take full browser width */
+     height:100%; /* take full browser height*/
+     background-image: url("https://cdn.glitch.com/7bd6d029-03b9-49af-979e-b1b21ea7609a%2Fcap-city-daylight-2528987.jpg?v=1567464703770");
+     background-size: cover;
+}
+
+@font-face {
+  font-family: 'Umarxx';
+  src: url('https://cdn.glitch.com/7bd6d029-03b9-49af-979e-b1b21ea7609a%2Fbudgetsten-bled-webfont.woff?v=1567477064507') format("woff");
+}
+@font-face {
+  font-family: 'Bebas';
+  src: url('https://cdn.glitch.com/7bd6d029-03b9-49af-979e-b1b21ea7609a%2Fbebas-regular-webfont.woff?v=1567481052595') format("woff");
+}

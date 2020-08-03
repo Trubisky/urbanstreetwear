@@ -1,0 +1,48 @@
+<div class="col-sm-10 col-sm-offset-1" style="background-color: rgba(255,255,255,.9); margin-top: 2%;">
+  <h1 style="font-size: 450%; font-family: 'Bebas'; text-align: center;">
+    MY CART <i class="fas fa-shopping-cart"></i>
+  </h1>
+  <div class="row" style="margin-left: 2%; border-bottom: solid; width: 96%;" ng-repeat="item in extendedCart">
+    <div class="col-sm-4">
+          <img ng-src="{{item.styleData.IMAGE}}" style="width: 100%; height: auto;"/>
+    </div>
+    <div class="col-sm-8">
+        <span style="font-size: 250%; font-family: 'Bebas'; ">
+          {{item.NAME}} ({{item.styleData.STYLE.toUpperCase()}}) <br />
+        </span>
+      
+      <div class="col-sm-6">
+        <span style="font-size: 250%; font-family: 'Bebas'; text-align: center;">
+          QUANTITY: {{item.quantity}}
+        </span>
+        <select class="form-control" >
+          <option value="1" ng-selected="item.quantity == 1">1</option>
+          <option value="2" ng-selected="item.quantity == 2">2</option>
+          <option value="3" ng-selected="item.quantity == 3">3</option>
+          <option value="4" ng-selected="item.quantity == 4">4</option>
+          <option value="5" ng-selected="item.quantity == 5">5</option>
+        </select> 
+      </div>
+      <div class="col-sm-6">
+        <span style="font-size: 250%; font-family: 'Bebas'; text-align: center;">
+          SIZE: {{item.size}}
+        </span>
+        <select class="form-control" >
+          <option value="S" ng-selected="item.size == 'S'">S</option>
+          <option value="M" ng-selected="item.size == 'M'">M</option>
+          <option value="L" ng-selected="item.size == 'L'">L</option>
+          <option value="L" ng-selected="item.size == 'XL'">XL</option>
+        </select> 
+      </div>
+    </div>   
+  </div>
+  <br />
+  <div class="col-sm-12">
+    <h1 style="font-size: 250%; font-family: 'Bebas'; text-align: center;">
+          TOTAL PRICE: ${{totalPrice}}
+      </h1>
+    <button class="btn btn-primary" style="font-size: 200%; width: 50%; margin-left: 25%; margin-bottom: 10%; font-family: 'Bebas'" ng-show="totalPrice" ng-click="navigate('/checkout')">
+      PROCEED TO CHECKOUT
+    </button>
+  </div>
+</div>
