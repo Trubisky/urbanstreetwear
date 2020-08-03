@@ -1,0 +1,60 @@
+<div class="col-sm-10 col-sm-offset-1" style="background-color: rgba(255,255,255,.9); margin-top: 2%;">
+  <div class="row" style="margin-left: 2%;">
+    <h1 style="font-size: 300%; font-family: 'Umarxx'; text-align: center;">
+      {{product.NAME}}
+    </h1>
+    <br />
+    <img ng-src="{{displayImage}}" style="width: 60%; margin-left: 20%; height: auto;"/>
+    <select class="form-control" style="width: 50%; margin-left: 25%;" ng-model="selectedStyleInfo" ng-change="changeImage();">
+      <option ng-repeat="style in product.STYLES" value="{{style}}">{{style.STYLE}}</option>
+    </select>
+    <div class="col-sm-6">
+      <h1 style="font-size: 300%; font-family: 'BEBAS';">
+      PRICE: ${{product.PRICE}}
+      <br />
+      AVAILABILITY: <span style="color: green;">IN STOCK</span>
+      </h1>
+      </div>
+    <div class="col-sm-6">
+      <h1 style="font-family: 'Bebas'">
+        QUANTITY
+      </h1>
+      <select class="form-control" ng-model="quantity">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <h1 style="font-family: 'Bebas'">
+        SIZE
+      </h1>
+      <select class="form-control" ng-model="size">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select> 
+    </div>
+  </div>
+  <div class="row" style="margin-left: 2%; padding-bottom: 30px;">
+    <h1 style="font-size: 400%; font-family: 'Bebas'; text-align: center;">
+      SHIPPING INFORMATION
+    </h1>
+    <h1 style="font-size: 300%; font-family: 'Bebas'; text-align: center;">
+      SHIPPING COST: FREE <br />
+      ESTIMATED SHIPPING TIME: 8-30 DAYS
+    </h1>
+    <br />
+    <button class="btn btn-warning">
+      <h1 style="font-family: 'Bebas'" ng-click="addtocart(false);">
+        ADD TO CART
+      </h1>
+    </button>
+    <button class="btn btn-success">
+      <h1  style="font-family: 'Bebas'">
+        ADD TO CARD & PROCEED TO CHECKOUT
+      </h1>
+    </button>
+  </div>
+</div>

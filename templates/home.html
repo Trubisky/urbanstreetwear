@@ -1,0 +1,38 @@
+<div id="home">
+  <div class="row">
+    <div style="margin-top: 2%; background-color: rgba(255,255,255,.9); padding: 3 10 10 10;" class="col-sm-10 col-sm-offset-1" >
+      <h1 style="font-family: 'Bebas';">
+        RUNNING SINCE 2019, URBAN STREETWEAR FEATURES A WIDE VARIETY OF POPULAR CLOTHING DESIGNS BASED ON MODERN DAY TRENDS FOR DISCOUNT PRICES.
+      </h1>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1" style="background-color: rgba(255,255,255,.9); margin-top: 2%;">
+      <h1 style="font-size: 300%; font-family: 'Bebas'">
+        <i class="fas fa-star"></i> FEATURED ITEMS
+      </h1>
+      <div style="display: inline-block; overflow-x: auto;  white-space: nowrap; padding: 5 5 25 5;">
+        <div style="height: 25%; width: 40%; display: inline-block;" ng-repeat="item in featured">
+          <a ng-click="navigateToProduct(item.ID);"><img style="height: 70%; width: 100% ;" src="{{item.DEFAULTIMAGE}}"/></a>
+           <br />
+          <span style="font-size: 200%; width: 45%; white-space: normal; font-family: 'Umarxx';">{{item.NAME}}</span><br/>
+          <span style="font-size: 200%; width: 45%; white-space: normal; font-family: 'Bebas';">${{item.PRICE}} USD</span>
+        </div>      
+      </div>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1" style="background-color: rgba(255,255,255,.9); margin-top: 2%;">
+      <h1 style="font-size: 300%; font-family: 'Bebas'">
+        <i class="fas fa-fire"></i> POPULAR ITEMS
+      </h1>
+      <div style="display: inline-block; overflow-x: auto;  white-space: nowrap; padding: 5 5 25 5;">
+        <div style="height: 25%; width: 40%; display: inline-block;" ng-repeat="item in popular">
+          <a ng-click="navigateToProduct(item.ID);"><img style="height: 70%; width: 100% ;" src="{{item.DEFAULTIMAGE}}"/></a>
+           <br />
+          <span style="font-size: 200%; width: 45%; white-space: normal; font-family: 'Umarxx';">{{item.NAME}}</span><br/>
+          <span style="font-size: 200%; width: 45%; white-space: normal; font-family: 'Bebas';">${{item.PRICE}} USD</span>
+        </div>        
+      </div>
+    </div> 
+  </div>
+</div>
+
+
+
